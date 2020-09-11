@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+### [Hello Git](HelloGit.html)
 
-You can use the [editor on GitHub](https://github.com/aladaspalabras/hellogit/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/aladaspalabras/hellogit/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- [1. Conceptos básicos de Git](HelloGit.html#1.-Conceptos-básicos-de-Git)
+    - [1.1. ¿Qué es Git?](HelloGit.html#1.1.-¿Qué-es-Git?)
+    - [1.2. ¿Qué es un control de versiones?](HelloGit.html#1.2.-¿Qué-es-un-control-de-versiones?)
+    - [1.3. ¿Git y GitHub son lo mismo?](HelloGit.html#1.3.-¿Git-y-GitHub-son-lo-mismo?)
+    - [1.4. ¿Cómo funciona Git?](HelloGit.html#1.4.-¿Cómo-funciona-Git?)
+- [2. Primeros pasos: obtener un repositorio](HelloGit.html#2.-Primeros-pasos:-obtener-un-repositorio)
+    - [2.1. Descargar un repositorio existente](HelloGit.html#2.1.-Descargar-un-repositorio-existente)
+    - [2.2. Crear un repositorio nuevo](HelloGit.html#2.2.-Crear-un-repositorio-nuevo)  
+- [3. ¿Cómo hacer que Git ignore archivos?](HelloGit.html#3.-¿Cómo-hacer-que-Git-ignore-archivos?)
+- [4. Gestión de cambios](HelloGit.html#4.-Gestión-de-cambios)
+    - [4.1. Ver cambios realizados respecto del remoto](HelloGit.html#4.1.-Ver-cambios-realizados-respecto-del-remoto)
+    - [4.2. Deshacer cambios en el árbol de trabajo](HelloGit.html#4.2.-Deshacer-cambios-en-el-árbol-de-trabajo)
+    - [4.3. Quitar cambios del área de staging](HelloGit.html#4.3.-Quitar-cambios-del-área-de-staging)
+    - [4.4. Quitar cambios del área de confirmación](HelloGit.html#4.4.-Quitar-cambios-del-área-de-confirmación)
+    - [4.5. Volver un archivo a la versión de algún commit anterior](HelloGit.html#4.5.-Volver-un-archivo-a-la-versión-de-algún-commit-anterior)
+- [5. Merge](HelloGit.html#5.-Merge)
+    - [5.1. ¿Cómo saber si alguien más hizo cambios?](HelloGit.html#5.1.-¿Cómo-saber-si-alguien-más-hizo-cambios?)
+    - [5.2. Cuando hay conflictos](HelloGit.html#5.2.-Cuando-hay-conflictos)
+- [6. Ramas](HelloGit.html#6.-Ramas)
+    - [6.1. Creación de ramas](HelloGit.html#6.1.-Creación-de-ramas)
+    - [6.2. Cambio entre ramas](HelloGit.html#6.2.-Cambio-entre-ramas)
+    - [6.3. Fusión de ramas](HelloGit.html#6.3.-Fusión-de-ramas)
