@@ -18,15 +18,15 @@ Existen tres tipos de sistemas de contro de cambios (VCS, por sus siglas en ingl
 
 - **Control de versiones local:** guarda copias de las versiones de los archivos de manera local, en nuestra computadora. Desventaja: si la computadora se rompe o algo le sucede, perdemos nuestro trabajo.
 - **Control de versiones centralizado (CVCS):** guarda copias de las versiones de los archivos en un servidor remoto. Las personas que estén trabajando en un mismo proyecto pueden conectarse a dicho servidor y así acceder a la versión que deseen y hacer sus modificaciones. Desventaja: si por alguna razón el servidor se cae o no tenemos acceso a él, no podremos trabajar.
-- **Control de versiones distribuido (DVCS):** las copias de los archivos y su historial de cambio son guardados en un servidor remoto y, a su vez, cada miembro del equipo puede tener una copia de ellos guardada localmente.
+- **Control de versiones distribuido (DVCS):** las copias de los archivos y su historial de cambios son guardados en un servidor remoto y, a su vez, cada miembro del equipo puede tener una copia de ellos guardada localmente.
 
 ## 1.3. ¿Git y GitHub son lo mismo?
 
-No. Git es el sistema de control de versiones que nos permite hacer un seguimiento de nuestros archivos y gestionar sus versiones. GitHub es un servidor remoto que al cual se conecta nuestra computadora cada vez que subimos (pusheamos) o bajamos (clonamos o pulleamos) información, entre otras cosas. Así como existe GitHub, existen otros servidores: GitLab, Bitbucket, SourceForge, etc.
+No. Git es el sistema de control de versiones que nos permite hacer un seguimiento de nuestros archivos y gestionar sus versiones. GitHub es un servidor remoto al cual se conecta nuestra computadora cada vez que subimos (pusheamos) o bajamos (clonamos o pulleamos) información, entre otras cosas. Así como existe [GitHub](https://github.com/), existen otros servidores: [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/product/), [SourceForge](https://sourceforge.net/), etc.
 
 ## 1.4. ¿Cómo funciona Git?
 
-En Git, la información relacionada a nuestros archivos es manejada como una _copia instantánea_ de estos.Cada vez que se realiza un cambio en un proyecto, "se toma una foto" del estado de cada archivo en ese proyecto y se guarda la referencia. Y, para ser más eficiente, el sistema solo guarda nuevamente los archivos que se han modificado respecto de la última versión. Si un archivo no fue modificado, conserva la vieja versión que ya poseía almacenada.
+En Git, la información relacionada a nuestros archivos es manejada como una _copia instantánea_ de estos.Cada vez que se realiza un cambio en un proyecto, "se toma una foto" del estado de cada archivo en ese proyecto y se guarda la referencia. Para ser más eficiente, el sistema solo guarda nuevamente los archivos que se han modificado respecto de la última versión. Si un archivo no fue modificado, el sistema conserva la vieja versión que ya poseía almacenada.
 
 ![alt text](./pictures/instantaneas.png)
 
@@ -34,9 +34,9 @@ En Git, la información relacionada a nuestros archivos es manejada como una _co
 
 Git tiene tres estados principales en los que se pueden encontrar los archivos: 
 
-- modificado (modified): significa que has modificado el archivo pero todavía no lo hemos preparado para su confirmacion, no los hemos añadido al índice
-- preparado (staged): significa que has marcado un archivo modificado en su versión actual para que sea almacenado en tu próxima confirmación
-- confirmado (committed): significa que los datos están almacenados de manera segura en tu base de datos local
+- modificado (modified): significa que el archivo ha sido modificado pero todavía no se encuentra preparado para su confirmacion, no ha sido añadido al índice
+- preparado (staged): significa que un archivo modificado ha sido marcado para que ser almacenado en la próxima confirmación
+- confirmado (committed): significa que el archivo ha sido confirmado y, la próxima vez que se realice un push, se subirá al remoto. Aquí los datos están almacenados de manera segura en la base de datos LOCAL, pero todavía no se encuentran en la copia remota del repositorio (alojada en el servidor que se haya elegido).
 
 De este modo, un proyecto de Git cuenta con tres secciones principales: 
 
