@@ -1,4 +1,4 @@
-## 1. Conceptos básicos de Git
+# 1. Conceptos básicos de Git
 
 ## 1.1. ¿Qué es Git?
 
