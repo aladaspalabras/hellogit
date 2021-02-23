@@ -1,7 +1,7 @@
 1. [Conceptos básicos de Git](./basic-concepts.md)
    1. [¿Qué es Git?](./basic-concepts.md#1.1.-¿Qué-es-Git?)
    2. [¿Qué es un control de versiones?](./basic-concepts.md#1.2.-¿Qué-es-un-control-de-versiones?)
-   3. [¿Git y GitHub son lo mismo?](./basic-concepts.md#1.3.-¿Git-y-GitHub-son-lo-mismo?)
+   3. [¿Git y GitHub son lo mismo?](./basic-concepts.md#1.3.-¿Git_y_GitHub_son_lo_mismo?)
    4. [¿Cómo funciona Git?](./basic-concepts.md#1.4.-¿Cómo-funciona-Git?)
   
 2. [Primeros pasos: obtener un repositorio](./first-steps.md)
