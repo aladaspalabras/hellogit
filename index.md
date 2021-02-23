@@ -7,7 +7,7 @@
 2. [Primeros pasos: obtener un repositorio](./first-steps.md)
    1. [Descargar un repositorio existente](./first-steps.md#2.1.-Descargar-un-repositorio-existente)
    2. [Crear un repositorio nuevo](./first-steps.md#2.2.-Crear-un-repositorio-nuevo)
-   3. [Forkear un repositorio](./first-steps.html#2.3.-Forkear-un-repositorio)
+   3. [Forkear un repositorio](./first-steps.md#2.3.-Forkear-un-repositorio)
 
 3. [Configuración de un repositorio](./config.md)
    1. [Ignorar archivos](./config.md#3.1.-Ignorar-archivos)
