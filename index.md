@@ -1,13 +1,13 @@
 1. [Conceptos básicos de Git](./basic-concepts.md)
    1. [¿Qué es Git?](./basic-concepts.md#1.1.-¿Qué-es-Git?)
    2. [¿Qué es un control de versiones?](./basic-concepts.md#1.2.-¿Qué-es-un-control-de-versiones?)
-   3. [¿Git y GitHub son lo mismo?](./basic-concepts.md#1.3.-¿Git_y_GitHub_son_lo_mismo?)
+   3. [¿Git y GitHub son lo mismo?](./basic-concepts.md#1.3.-¿Git-y-GitHub-son-lo_mismo?)
    4. [¿Cómo funciona Git?](./basic-concepts.md#1.4.-¿Cómo-funciona-Git?)
   
 2. [Primeros pasos: obtener un repositorio](./first-steps.md)
    1. [Descargar un repositorio existente](./first-steps.md#2.1.-Descargar-un-repositorio-existente)
    2. [Crear un repositorio nuevo](./first-steps.md#2.2.-Crear-un-repositorio-nuevo)
-   3. [Forkear un repositorio](./first-steps.md#2.3-Forkear-un-repositorio)
+   3. [Forkear un repositorio](./first-steps.html#2.3.-Forkear-un-repositorio)
 
 3. [Configuración de un repositorio](./config.md)
    1. [Ignorar archivos](./config.md#3.1.-Ignorar-archivos)
