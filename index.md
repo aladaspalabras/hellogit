@@ -9,7 +9,17 @@
    2. Crear un repositorio nuevo
    3. Forkear un repositorio
 
-3. [Comandos básicos]()
+3. [Comandos básicos](./basic-commands.md)
+   1. Clone
+   2. Config
+   3. Status
+   4. Add
+   5. Commit
+   6. Push
+   7. Pull
+   8. Checkout
+   9. Log
+   10. Diff
 
 4. [Configuración de un repositorio](./config.md)
    1. Ignorar archivos
