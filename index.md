@@ -30,3 +30,6 @@
 7. [Merge](./merge.md)
    1. ¿Cómo saber si alguien más hizo cambios?
    2. Cuando hay conflictos
+<br/><br/><br/>
+
+Por [Macarena Fernandez Urquiza](https://www.linkedin.com/in/m-fernandez-urquiza/)
