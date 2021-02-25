@@ -1,6 +1,6 @@
 # 2. Primeros pasos: obtener un repositorio
 
-Hay tres maneras de obtener un repositorio Git. La primera es clonar un repositorio existente en la nube. La segunda consiste en tomar un proyecto o directorio existente en nuestra computadora e importarlo en Git. Y la tercera, forkear un repositorio. Esta última opción es la que suele utilizarse cuando se quiere contribuir con algún proyecto de código abierto, dado que nos permite hacer una copia en nuestro repositorio remodo del proyecto de otra persona, alojado en su repositorio remoto.
+Hay tres maneras de obtener un repositorio Git. La primera es clonar un repositorio existente en la nube. La segunda consiste en tomar un proyecto o directorio existente en nuestra computadora e importarlo en Git. Y la tercera, forkear un repositorio. Esta última opción es la que suele utilizarse cuando se quiere contribuir con algún proyecto de código abierto, dado que nos permite hacer una copia en nuestro repositorio remoto del proyecto de otra persona, alojado en su repositorio remoto.
 
 ## 2.1. Descargar un repositorio existente
 
@@ -92,10 +92,10 @@ Si ahora volvemos a la página donde se encuentra nuestro repositorio remoto y l
 
 ## 2.3. Forkear un repositorio
 
-Cuando forkeamos un repositorio, hacemos una bifurcación de un proyecto. De esta manera, podemos tomar el código de un repositorio ajeno, hacer una copia en nuestro repositorio remoto y trabajar en esa copia cn la seguridad de que no estamos modificando el código del proyecto original. 
+Cuando forkeamos un repositorio, hacemos una bifurcación de un proyecto. De esta manera, podemos tomar el código de un repositorio ajeno, hacer una copia en nuestro repositorio remoto y trabajar en esa copia con la seguridad de que no estamos modificando el código del proyecto original. 
 
 Para forkear un repositorio simplemente debemos clickear en el botón `fork` (usualmente ubicado en la esquina superior derecha de la pantalla).
 
 ![alt text](./pictures/fork.png)
 
-Esto hará que se genere una copia idéndica al proyecto forkeado en nuestro repo y, a partir de allí, podemos clonarlo en nuestra computadora como se detallón en [la sección 2.1](#2.1.-Descargar-un-repositorio-existente).
+Esto hará que se genere una copia idéndica al proyecto forkeado en nuestro repo y, a partir de allí, podemos clonarlo en nuestra computadora como se detalló en [la sección 2.1](#2.1.-Descargar-un-repositorio-existente).

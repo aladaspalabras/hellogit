@@ -1,6 +1,6 @@
 ## 5. Merge
 
-Supongamos que con un amigue estamos trabajando en el mismo repositorio y ambos estamos subiento nuestros cambios al brazo ```master```. En este caso podría suceder que los dos nos pulleamos el brazo en el mismo momento y, mientras nuestro amigue hacía una modificación, nosotres también hacíanos una propia. Ahora bien, nuestro amigue pushea sus cambios y, cuando nosotres queremos pushear (previo haber hecho un ```add``` y un ```commit```) los nuestros, la consola nos diga que en el remoto hay cambios que no tenemos en nuestro repo local (¡claro! los de nuestro amigue). ¿Qué hacemos entonces? Hacemos un pull y nos descargamos los nuevos cambios.
+Supongamos que con une amigue estamos trabajando en el mismo repositorio y ambos estamos subiendo nuestros cambios al brazo ```master```. En este caso podría suceder que los dos nos pulleamos el brazo en el mismo momento y, mientras nuestro amigue hacía una modificación, nosotres también hacíanos una propia. Ahora bien, nuestro amigue pushea sus cambios y, cuando nosotres queremos pushear (previo haber hecho un ```add``` y un ```commit```) los nuestros, la consola nos diga que en el remoto hay cambios que no tenemos en nuestro repo local (¡claro! los de nuestro amigue). ¿Qué hacemos entonces? Hacemos un pull y nos descargamos los nuevos cambios.
 
 Si las modificaciones que estaban en el remoto no afectaban a los mismos archivos que nosotres modificamos, no tendremos problemas. Simplemente nos saldrá un mensaje en nano indicando que se realiza un Merge (nosotres podemos cambiar ese mensaje) y podremos hacer el push.
 
@@ -22,7 +22,7 @@ Si no hay cambios o si vemos que no resultan conflictivos, lo que debemos hacer 
 
 ### 5.2. Cuando hay conflictos
 
-Si no tomamos la precaución de controlar previamente que no hubiese conflictos o si la tomamos pero pensamos que era una buena idea resolverlos luego, tenemos que empezar a reflexionar sobre las decisiones que tomamos. Además, no vamos a llegar muy lejor porque, si hay conflictos, cuando queramos hacer el push de nuestros cambios, Git no nos va a dejar y nos va a pedir que resolvamos los conflictos existentes.
+Si no tomamos la precaución de controlar previamente que no hubiese conflictos o si la tomamos pero pensamos que era una buena idea resolverlos luego, tenemos que empezar a reflexionar sobre las decisiones que tomamos. Además, no vamos a llegar muy lejos porque, si hay conflictos, cuando queramos hacer el push de nuestros cambios, Git no nos va a dejar y nos va a pedir que resolvamos los conflictos existentes.
 
 Si en este momento ejecutamos el comando ```git status```, veremos:
 

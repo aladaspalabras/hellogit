@@ -14,7 +14,7 @@ La rama por defecto de Git es la rama master. Con la primera confirmación de ca
         
         $ git checkout -b <new-branch>   # crea una nueva rama y nos mueve hacia ella
     
-Esto creará un nuevo apuntador llamado <new-branch> que estará basado en la rama desde la cual fue creado. Esto significa que, hasta que hagamos alguna modificación en esta nueva rama o en aquella desde la que partimos, ambas serán iguales. 
+Esto creará un nuevo apuntador llamado \<new-branch> que estará basado en la rama desde la cual fue creado. Esto significa que, hasta que hagamos alguna modificación en esta nueva rama o en aquella desde la que partimos, ambas serán iguales. 
 Además, al mismo tiempo que crea la rama, el comando nos moverá a ese apuntador. Cualquier cambio que hagamos será seguido por ese apuntador y no por aquel donde nos encontrábamos previamente.
 
 ![alt text](./pictures/two-branches.png)
@@ -31,7 +31,7 @@ También es posible utilizar el comando ```stash```, que nos permite guardar tem
 
 #### 6.3.1. Merge
 
-Si deseamos fusionar los cambios de una rama en otra, debemos movernos a aquella en la que queremos importar los cambios utilizando el comando ```checkout``` y llevar los cambio de la rama deseada con el comando ```merge```:
+Si deseamos fusionar los cambios de una rama en otra, debemos movernos a aquella en la que queremos importar los cambios utilizando el comando ```checkout``` y llevar los cambios de la rama deseada con el comando ```merge```:
 
         $ git checkout <one-branch>             # nos mueve a la rama que recibirá los cambios
         
@@ -46,7 +46,7 @@ Si deseamos fusionar los cambios de una rama en otra, debemos movernos a aquella
 
 Cuando hacemos un merge, una rama A (en la que estamos posicionados) se trae los cambios de otra rama B.
 
-En nn merge request (en GitLab) o pull request (en GitHub) es la rama B la que le pide a la rama A que incorpore sus cambios.
+En un merge request (en GitLab) o pull request (en GitHub) es la rama B la que le pide a la rama A que incorpore sus cambios.
 
 Esta acción debe hacerse desde la interfaz de la página del servidor donde se encuentre el remoto.
 
