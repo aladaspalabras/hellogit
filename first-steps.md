@@ -80,12 +80,12 @@ El paso anterior dejó nuestros archivos en nuestro repositorio local. Para subi
          
 ```origin``` es el nombre del remoto y ```master``` es el nombre de la rama. No siempre es necesario incluir esta información. Podemos configurar el repositorio y la rama a la que se debe hacer push por defecto utilizanod alguno de los siguientes comandos:
 
-        $ git branch --set-upstream-to=<remote-branch>    # le indica a Git que la rama local en la que nos
-                                                          # encontramos se sincroniza con la rama remota que 
-                                                          # le indiquemos
+        $ git branch --set-upstream-to=<remote-branch>    # le indica a Git que la rama local en la que
+                                                          # nos encontramos se sincroniza con la rama
+                                                          # remota que le indiquemos
         
-        $ git push --set-upstream origin <remote-branch>  # le indica a Git que la rama local pushea a la
-                                                          # rama remota indicada
+        $ git push --set-upstream origin <remote-branch>  # le indica a Git que la rama local pushea a
+                                                          # la rama remota indicada
 
     
 Si ahora volvemos a la página donde se encuentra nuestro repositorio remoto y le damos _refresh_, veremos que tiene los archivos que hemos subido.
