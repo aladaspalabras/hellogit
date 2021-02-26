@@ -20,6 +20,7 @@
    8. Checkout
    9. Log
    10. Diff
+   11. Fetch
 
 4. [Configuración de un repositorio](./config.md)
    1. Ignorar archivos
@@ -30,7 +31,8 @@
    2. Deshacer cambios en el árbol de trabajo
    3. Quitar cambios del área de staging
    4. Quitar cambios del área de confirmación
-   5. Volver un archivo a la versión de algún commit anterior
+   5. Visualizar qué commits modificaron un archivo
+   6. Volver un archivo a la versión de algún commit anterior
 
 6. [Ramas](./branches.md)
    1. Creación de ramas

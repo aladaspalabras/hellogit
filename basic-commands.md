@@ -39,3 +39,5 @@ TO-DO
 ## 3.10. Diff
 
 TO-DO 
+
+## 3.11. Fetch
