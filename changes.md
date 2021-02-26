@@ -2,23 +2,23 @@
 
 ## 5.1. Ver cambios realizados respecto del remoto
 
-        $ git diff                      # diferencias entre el directorio de trabajo y directorio de git
-                                        # i.e. archivos que fueron modificados pero no se agregaron al
-                                        # staging (el directorio de git tendrá los archivos en la
-                                        # versión en la que se encontraban en el remoto la última vez
-                                        # que se sincronizó el repo local)
+        $ git diff                      # diferencias entre el área de trabajo y directorio de git
+                                        # i.e. archivos que fueron modificados pero no se agregaron
+                                        # al staging (el directorio de git tendrá los archivos en
+                                        # la versión en la que se encontraban en el remoto la última
+                                        # vez que se sincronizó el repo local)
         > + línea añadida (en verde)
-          - línea borrada (en rojo)     
+          - línea borrada (en rojo)
 
         $ git diff <file-path>          # ídem diff pero solo muestra las diferencias para el archivo
-                                        # indicado en <file-path>     
+                                        # indicado en <file-path>
 
         $ git diff --staged             # diferencias entre el staging y el directorio de git (.git)
                                         # (el staging o área de preparación tendrá los archivos
                                         # modificados agregados con add)
 
         $ git diff <remote-repo>/<remote-branch>..<local-branch>        # diferencias entre el área de
-                                                                        # confirmación y el remoto        
+                                                                        # confirmación y el remoto     
 
         $ git diff <commit-hash> <file-path>    # diferencias entre archivo indicado en <file-path>
                                                 # que se encuentra en el directorio de trabajo y el
