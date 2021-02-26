@@ -1,26 +1,32 @@
-## 6. Merge
+# 6. Resolución de conflictos
 
-Supongamos que con une amigue estamos trabajando en el mismo repositorio y ambos estamos subiendo nuestros cambios al brazo ```master```. En este caso podría suceder que los dos nos pulleamos el brazo en el mismo momento y, mientras nuestro amigue hacía una modificación, nosotres también hacíanos una propia. Ahora bien, nuestro amigue pushea sus cambios y, cuando nosotres queremos pushear (previo haber hecho un ```add``` y un ```commit```) los nuestros, la consola nos diga que en el remoto hay cambios que no tenemos en nuestro repo local (¡claro! los de nuestro amigue). ¿Qué hacemos entonces? Hacemos un pull y nos descargamos los nuevos cambios.
+Supongamos que estamos trabajando en el mismo repositorio con otras personas y estamos compartiendo nuestra rama de trabajo con alguien más, por lo que dos personas están pusheando a la misma rama.
 
-Si las modificaciones que estaban en el remoto no afectaban a los mismos archivos que nosotres modificamos, no tendremos problemas. Simplemente nos saldrá un mensaje en nano indicando que se realiza un Merge (nosotres podemos cambiar ese mensaje) y podremos hacer el push.
+Supongamos, además, que la otra persona se sincronizó su rama en el mismo momento que nosotros y, por ende, tenemos las mismas versiones de los archivos.
 
-Si, en cambio, tanto nuestro amigue como nosotres hicimos modificaciones en los mismos archivos, habrá conflictos y tendremos que solucionarlos. A continuación se explica cómo.
+En ese contexto, ambos empezamos a trabajar y a introducir cambios en el repositorio. Sin embargo, la otra persona pushea sus modificaciones antes que nosotros y entonces, cuando nosotros queremos subir al remoto las nuestras, la consola nos dice que éste contiene cambios que no tenemos en nuestro repo local (claro, los que acaba de subir la otra persona). 
+
+¿Qué hacer entonces? Hacemos un `pull` y nos descargamos los nuevos cambios.
+
+Si las modificaciones que estaban en el remoto no afectaban a los mismos archivos que nosotros modificamos, no tendremos problemas. Simplemente nos saldrá un mensaje editable (que no es otra cosa que un mensaje de confirmación) indicando que se realiza un Merge y podremos hacer el `push`.
+
+Si, en cambio, la otra persona modificó un archivo también editado por nosotros, habrá conflictos y tendremos que solucionarlos. A continuación se explica cómo.
 
 ## 6.1. ¿Cómo saber si alguien más hizo cambios?
 
 Los siguientes comandos nos dirán si hubo cambios en el remoto que no tenemos en el repositorio local
 
         $ git fetch <remote-name>/<branch-name>   # nos trae los cambios de la rama indicada del remoto
-                                                  # para que podamos verlos, pero no los descarga a nuestro
-                                                  # directorio de trabajo
+                                                  # para que podamos verlos, pero no los descarga a
+                                                  # nuestro directorio de trabajo
         
-        $ git fetch --all                         # ídem anterior pero con todas las ramas del remoto de todos
-                                                  # los remotos (usarlo con cuidado)
+        $ git fetch --all                         # ídem anterior pero con todas las ramas del remoto de
+                                                  # todos los remotos (usarlo con cuidado)
 
 Esto nos permite ver si hay cambios que puedan generar conflictos con los nuestros (porque modifican el mismo archivo, por ejemplo).
 Si no hay cambios o si vemos que no resultan conflictivos, lo que debemos hacer es ejecutar los comandos ```add``` y ```commit``` de modo que nuestros cambios se guarden en el área de preparación. Una vez hecho esto, nos descargamos los cambios del remoto utilizando el comando ```pull``` y, finalmente, pusheamos nuestros cambios (solo pullear si hay cambios, si no los hay, luego de commitear, pushear directamente).
 
-## 6.2. Cuando hay conflictos
+## 6.2. Conflictos en un merge
 
 Si no tomamos la precaución de controlar previamente que no hubiese conflictos o si la tomamos pero pensamos que era una buena idea resolverlos luego, tenemos que empezar a reflexionar sobre las decisiones que tomamos. Además, no vamos a llegar muy lejos porque, si hay conflictos, cuando queramos hacer el push de nuestros cambios, Git no nos va a dejar y nos va a pedir que resolvamos los conflictos existentes.
 
@@ -74,3 +80,7 @@ Una vez hecho esto, si ejecutamos el comando ```git status```, veremos:
             modified:   README
             
 Si todo ha salido correctamente, y vemos que todos los archivos conflictivos están marcados como preparados, podemos utilizar el comando ```commit``` para terminar de confirmar la fusión y luego pushear.
+
+## 6.3. Conflictos en una pull request
+
+TODO

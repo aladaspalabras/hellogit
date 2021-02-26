@@ -26,9 +26,10 @@
    2. Cambio entre ramas
    3. Fusión de ramas
 
-6. [Merge](./merge.md)
+6. [Resolución de conflictos](./conflicts.md)
    1. ¿Cómo saber si alguien más hizo cambios?
-   2. Cuando hay conflictos
+   2. Conflictos en un merge
+   3. Conflictos en una pull request
 <br/><br/><br/>
 
 Por [Macarena Fernandez Urquiza](https://www.linkedin.com/in/m-fernandez-urquiza/)

@@ -65,4 +65,4 @@ En un merge request (en GitLab) o pull request (en GitHub) es la rama B la que l
 
 Esta acción debe hacerse desde la interfaz de la página del servidor donde se encuentre el remoto.
 
-**Aclaración:** Tanto el merge como el MR o PR pueden tener conflictos si la rama que se intenta fusionar no tiene (al momento de hacer la fusión) todos los cambios que tiene la rama a la que se quiere fusionar (i.e. debe tener en su historial el último commit de la rama a la cual se quieren fusionar los cambios). En caso de existir conflictos, se los deberá resolver como se detalla en la sección [6](./merge.md)
+**Aclaración:** Tanto el merge como el MR o PR pueden tener conflictos si la rama que se intenta fusionar no tiene (al momento de hacer la fusión) todos los cambios que tiene la rama a la que se quiere fusionar (i.e. debe tener en su historial el último commit de la rama a la cual se quieren fusionar los cambios). En caso de existir conflictos, se los deberá resolver como se detalla en la sección [6](./conflicts.md).
