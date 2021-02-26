@@ -31,4 +31,49 @@ Una vez ejecutado este comando, git nos mostrará que el archivo que se ha quita
 
 ## 4.2. Definir un template para mensajes de confirmación
 
-Cuando escribimos un mensaje de confirmación (`commit`), ya sea utilizando el flag `-m` o no, podemos escribir un mensaje como queramos, e incluir la información que nos parezca pertinente
+Cuando escribimos un mensaje de confirmación (`commit`), ya sea utilizando el flag `-m` o no, podemos escribir un mensaje como queramos, e incluir la información que nos parezca pertinente. Sin embargo, cuando estamos contribuyendo en un proyecto con más gente, puede que queramos tener una plantilla que le indique a cada persona la información a incluir.
+
+En este último caso, podemos agregar a nuestro repositorio un archivo (puede estar oculto) con la plantilla deseada y, con el siguiente comando, configurarla para que, cada vez que se ejecute `git commit`, se muestre dicha plantilla.
+
+El comando para la configuración es el siguiente:
+
+```{bash}
+git config commit.template <path-a-la-plantilla>
+```
+
+Entonces, por ejemplo, supongamos que tenemos un archivo llamado `.commit-mssg` que contiene la siguiente información:
+
+```{txt}
+# [<tag>] <título> (Máx. 72 caracteres)
+# |<----   Preferentemente, hasta 50 caracteres   --->|
+# Ejemplo:
+# [feat] Implementación de mensajes de commit automáticos
+
+# --- FIN DEL COMMIT ---
+# Posibles tags 
+#    feat     nuevo feature
+#    fix      bug fix
+#    refactor refactoring code
+#    style    formato, errores ortográficos, etc.; sin cambios en el código
+#    doc      cambios en la documentación
+#    test     Adiciones o cambios en los tests; sin cambios en el código de producción
+#    version  salto de versión o nueva release; sin cambios en el código de producción
+#    license  Ediciones de la licencia; sin cambios en el código de producción
+#    WIP      Work In Progress; para commits intermedios
+#    defaults cambios en las opciones por defecto
+```
+
+Debemos ejecutar:
+
+```{bash}
+git config commit.template .commit-mssg
+```
+
+Y eso ahará que cada vez que ejecutemos `git commit` se muestre tal plantilla.
+
+Aquí es necesario hacer un par de aclaraciones:
+
+- La configuración de la plantilla para los mensajes de confirmación debe realizarse de manera local. Esto significa que cada persona que tenga una copia del repositorio deberá ejecutar el comando anterior para que la plantilla sea utilizada al hacer los commits.
+- El nombre del archivo con la plantilla es indistinto, mientras se lo configure correctamente, puede llamarse de cualqier forma.
+- Las líneas de la plantilla que tengan `#` no son tenidas en cuenta por git (igual que ocurre cuando escribimos el archiv `.gitignore`).
+- Si bien esta configuración asegura que cada vez que se ejecute el comando `git commit` aparezca la plantilla para ser editada en la consola, no prohibe que el usuario utilice el comando `git commit -m`, y en tal caso no mostrará el template. Por otro lado, tampoco prohibe escribir mensajes de confirmación que no respeten las indicaciones de la plantilla (ya sea utlizando el flag `-m` o no). Ésta es solo una sugenrecia o guía para el usuario
