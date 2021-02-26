@@ -16,7 +16,7 @@ Si, en cambio, la otra persona modificó un archivo también editado por nosotro
 
 Los siguientes comandos nos dirán si hubo cambios en el remoto que no tenemos en el repositorio local
 
-        $ git fetch <remote-name>/<branch-name>   # nos trae los cambios de la rama indicada del remoto
+        $ git fetch <remote-name> <branch-name>   # nos trae los cambios de la rama indicada del remoto
                                                   # para que podamos verlos, pero no los descarga a
                                                   # nuestro directorio de trabajo
         
@@ -24,26 +24,26 @@ Los siguientes comandos nos dirán si hubo cambios en el remoto que no tenemos e
                                                   # todos los remotos (usarlo con cuidado)
 
 Esto nos permite ver si hay cambios que puedan generar conflictos con los nuestros (porque modifican el mismo archivo, por ejemplo).
-Si no hay cambios o si vemos que no resultan conflictivos, lo que debemos hacer es ejecutar los comandos ```add``` y ```commit``` de modo que nuestros cambios se guarden en el área de preparación. Una vez hecho esto, nos descargamos los cambios del remoto utilizando el comando ```pull``` y, finalmente, pusheamos nuestros cambios (solo pullear si hay cambios, si no los hay, luego de commitear, pushear directamente).
+Si no hay cambios o si vemos que no resultan conflictivos, lo que debemos hacer es ejecutar los comandos `add` y `commit` de modo que nuestros cambios se guarden en el área de preparación. Una vez hecho esto, nos descargamos los cambios del remoto utilizando el comando `pull` y, finalmente, pusheamos nuestros cambios (solo pullear si hay cambios, si no los hay, luego de commitear, pushear directamente).
 
-## 6.2. Conflictos en un merge
+## 6.2. Conflictos en un merge (WiP)
 
-Si no tomamos la precaución de controlar previamente que no hubiese conflictos o si la tomamos pero pensamos que era una buena idea resolverlos luego, tenemos que empezar a reflexionar sobre las decisiones que tomamos. Además, no vamos a llegar muy lejos porque, si hay conflictos, cuando queramos hacer el push de nuestros cambios, Git no nos va a dejar y nos va a pedir que resolvamos los conflictos existentes.
+Si no tomamos la precaución de controlar previamente que no hubiese conflictos o si la tomamos pero pensamos que era una buena idea resolverlos luego, tenemos que empezar a reflexionar sobre las decisiones que tomamos. Además, no vamos a llegar muy lejos porque, si hay conflictos, cuando queramos hacer el push de nuestros cambios, Git no nos va a dejar y nos va a pedir que los resolvamos.
 
 Si en este momento ejecutamos el comando ```git status```, veremos:
 
-        $ git status
+  $ git status
 
-        On branch master
-        You have unmerged paths.
-          (fix conflicts and run "git commit")
+  On branch master
+  You have unmerged paths.
+    (fix conflicts and run "git commit")
 
-        Unmerged paths:
-          (use "git add <file>..." to mark resolution)
+  Unmerged paths:
+    (use "git add <file>..." to mark resolution)
 
-            both modified:      README
+      both modified:      README
 
-        no changes added to commit (use "git add" and/or "git commit -a")
+  no changes added to commit (use "git add" and/or "git commit -a")
         
 Todo aquello que sea conflictivo y no se haya podido resolver, se marca como "sin fusionar" (unmerged). Git añade a los archivos conflictivos unos marcadores especiales de resolución de conflictos que nos guiarán cuando los abramos manualmente y los editemos para corregirlos. 
 
