@@ -11,3 +11,4 @@ Log
 Diff
 Fetch
 Branch
+Stash
