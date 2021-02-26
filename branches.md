@@ -1,23 +1,31 @@
 ## 6. Ramas
 
-Cuando hablamos de ramificaciones, nos referimos a que podemos tomar la rama principal de desarrollo (llamada master, por defecto) y a partir de ahí continuar trabajando sin seguirla, utilizando otra rama.
+Cuando hablamos de ramificaciones, nos referimos a que podemos tomar una rama de desarrollo (supongamos, llamada master) y, a partir de ella, generar otra igual en la que seguiremos trabajando, pero cuyos cambios en principio no afectarás a la rama de origen.
 
-Esto es sumamente útil cuando estamos compartiendo nuestro repositorio con otras personas y no queremos que sus cambios interfieran en nuestro trabajo pero es posible que luego queramos integrar todo, los archivos en nuestra rama con los de las ramas de los demás.
+Esto es sumamente útil cuando estamos compartiendo nuestro repositorio con otras personas y no queremos que sus cambios interfieran en nuestro trabajo, pero es posible que luego queramos integrar todo, los archivos en nuestra rama con los de las ramas de los demás.
 
-Una rama Git es simplemente un apuntador móvil que señala cada una de las confirmaciones que vamos haciendo en nuestro repositorio. 
+Una rama Git es simplemente un apuntador móvil que señala cada una de las confirmaciones que vamos haciendo en nuestro repositorio, lo que significa que señala cada foto que de nuestros archivos que vamos tomando.
 
-La rama por defecto de Git es la rama master. Con la primera confirmación de cambios que realicemos, se creará esta rama principal master apuntando a dicha confirmación. En cada confirmación de cambios que realicemos, la rama irá avanzando automáticamente.
+Cuando creamos un repositorio, la primera rama qe se crea por defecto suele ser `master` o `main` y esta es la que se considera la _rama base_, pero esto es configurable y se puede indicar cualquier otra rama en su lugar.
+
+Que una rama sea la _rama base_ implica, entre otras cosas, que cuando alguien clone el repo, la rama en la que se encontrará ni bien se genera la copia local será esta rama.
+
+Con cada confirmación que realicemos, y mientras no nos cambiemos de rama, el apuntador de la rama base (o de la rama en la que nos enontemos) irá avanzando en la historia que registra git de un archivo.
 
 ![alt text](./pictures/master.png)
 
 ### 6.1. Creación de ramas
         
-        $ git checkout -b <new-branch>   # crea una nueva rama y nos mueve hacia ella
+        $ git checkout -b <new-branch>          # crea una nueva rama idéntica a la rama en la que nos
+                                                # encontramosy nos mueve hacia ella
     
 Esto creará un nuevo apuntador llamado \<new-branch> que estará basado en la rama desde la cual fue creado. Esto significa que, hasta que hagamos alguna modificación en esta nueva rama o en aquella desde la que partimos, ambas serán iguales. 
 Además, al mismo tiempo que crea la rama, el comando nos moverá a ese apuntador. Cualquier cambio que hagamos será seguido por ese apuntador y no por aquel donde nos encontrábamos previamente.
 
 ![alt text](./pictures/two-branches.png)
+
+        $ git branch <new-branch>          # crea una nueva rama idéntica a la rama en la que nos
+                                                # encontramosy nos mueve hacia ella
 
 ### 6.2. Cambio entre ramas
 
