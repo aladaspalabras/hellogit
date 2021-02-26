@@ -37,9 +37,7 @@ En este último caso, podemos agregar a nuestro repositorio un archivo (puede es
 
 El comando para la configuración es el siguiente:
 
-```{bash}
-git config commit.template <path-a-la-plantilla>
-```
+        $ git config commit.template <path-a-la-plantilla>
 
 Entonces, por ejemplo, supongamos que tenemos un archivo llamado `.commit-mssg` que contiene la siguiente información:
 
@@ -65,9 +63,7 @@ Entonces, por ejemplo, supongamos que tenemos un archivo llamado `.commit-mssg` 
 
 Debemos ejecutar:
 
-```{bash}
-git config commit.template .commit-mssg
-```
+        $ git config commit.template .commit-mssg
 
 Y eso ahará que cada vez que ejecutemos `git commit` se muestre tal plantilla.
 
