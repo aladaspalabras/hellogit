@@ -1,4 +1,4 @@
-## 6. Ramas
+## 5. Ramas
 
 Cuando hablamos de ramificaciones, nos referimos a que podemos tomar una rama de desarrollo (supongamos, llamada master) y, a partir de ella, generar otra igual en la que seguiremos trabajando, pero cuyos cambios en principio no afectarás a la rama de origen.
 
@@ -14,20 +14,22 @@ Con cada confirmación que realicemos, y mientras no nos cambiemos de rama, el a
 
 ![alt text](./pictures/master.png)
 
-### 6.1. Creación de ramas
+### 5.1. Creación de ramas
         
         $ git checkout -b <new-branch>          # crea una nueva rama idéntica a la rama en la que nos
-                                                # encontramosy nos mueve hacia ella
+                                                # encontramos y nos mueve hacia ella
     
 Esto creará un nuevo apuntador llamado \<new-branch> que estará basado en la rama desde la cual fue creado. Esto significa que, hasta que hagamos alguna modificación en esta nueva rama o en aquella desde la que partimos, ambas serán iguales. 
 Además, al mismo tiempo que crea la rama, el comando nos moverá a ese apuntador. Cualquier cambio que hagamos será seguido por ese apuntador y no por aquel donde nos encontrábamos previamente.
 
 ![alt text](./pictures/two-branches.png)
 
-        $ git branch <new-branch>          # crea una nueva rama idéntica a la rama en la que nos
-                                                # encontramosy nos mueve hacia ella
+Si, en cambio, solo queremos crear una nueva rama pero no movernos hacia ella, debemos ejecutar el siguiente comando:
 
-### 6.2. Cambio entre ramas
+        $ git branch <new-branch>               # crea una nueva rama idéntica a la rama en la que nos
+                                                # encontramos
+
+### 5.2. Cambio entre ramas
 
         $ git checkout <branch-name>      # mueve mi apuntador a la rama indicada
         
@@ -35,9 +37,9 @@ Para poder ejecutar este comando es necesario tener el árbol de trabajo de la r
 
 También es posible utilizar el comando ```stash```, que nos permite guardar temporalmente estos cambios sin confirmarlos ni descartarlos.
 
-### 6.3. Fusión de ramas
+### 5.3. Fusión de ramas
 
-#### 6.3.1. Merge
+#### 5.3.1. Merge
 
 Si deseamos fusionar los cambios de una rama en otra, debemos movernos a aquella en la que queremos importar los cambios utilizando el comando ```checkout``` y llevar los cambios de la rama deseada con el comando ```merge```:
 
@@ -50,7 +52,7 @@ Si deseamos fusionar los cambios de una rama en otra, debemos movernos a aquella
 
 ![alt text](./pictures/advance-testing2.png)
 
-#### 6.3.2. Merge Request (MR) o Pull Request (PR)
+#### 5.3.2. Merge Request (MR) o Pull Request (PR)
 
 Cuando hacemos un merge, una rama A (en la que estamos posicionados) se trae los cambios de otra rama B.
 

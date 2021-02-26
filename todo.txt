@@ -1,0 +1,13 @@
+Breve descripción y flags de coamndos básicos:
+Clone
+Config
+Status
+Add
+Commit
+Push
+Pull
+Checkout
+Log
+Diff
+Fetch
+Branch

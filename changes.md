@@ -1,6 +1,6 @@
-# 5. Gestión de cambios
+# 4. Gestión de cambios
 
-## 5.1. Ver cambios realizados respecto del remoto
+## 4.1. Ver cambios realizados respecto del remoto
 
         $ git diff                      # diferencias entre el área de trabajo y directorio de git
                                         # i.e. archivos que fueron modificados pero no se agregaron
@@ -24,7 +24,7 @@
                                                 # que se encuentra en el directorio de trabajo y el
                                                 # que está en el commit indicado con el <commit-hash>
 
-## 5.2. Deshacer cambios en el árbol de trabajo
+## 4.2. Deshacer cambios en el árbol de trabajo
 
         $ git checkout -- <file-path>           # deshace cambios realizados en <file-path> y vuelve el
                                                 # archivo a la versión en la que se encontraba antes de
@@ -34,7 +34,7 @@
                                                 # archivos que se encuentren donde se está posicionado
                                                 # y debajo de ella
 
-## 5.3. Quitar cambios del área de staging
+## 4.3. Quitar cambios del área de staging
 
         $ git reset HEAD <file-path>    # quita los cambios en el área de preparación del archivo
                                         # <file-path> pero lo deja modificado en el directorio de
@@ -43,7 +43,7 @@
         $ git reset HEAD                # ídem anterior pero quita los cambios de todos los archivos
                                         # en el área de preparación
 
-## 5.4. Quitar cambios del área de confirmación
+## 4.4. Quitar cambios del área de confirmación
 
         $ git revert <SHA>              # revierte el commit con el SHA indicado (pueden escribirse
                                         # solamente los primeros 7 caracteres, que son los que nos
@@ -58,7 +58,7 @@
         $ git reset --hard HEAD~1       # ídem reset --soft solo que no conserva los archivos 
                                         # modificados
 
-## 5.5. Visualizar qué commits modificaron un archivo
+## 4.5. Visualizar qué commits modificaron un archivo
 
         $ git log <file-path>                   # permite visualizar los commits que han modificado el
                                                 # archivo indicado en <file-path>
@@ -75,13 +75,13 @@
 
         # git log --author=<author-name>        # muestra los commits realizador por <author-name>
 
-## 5.6. Volver un archivo a la versión de algún commit anterior
+## 4.6. Volver un archivo a la versión de algún commit anterior
         
         $ git checkout <commit-hash> -- <file-path>     # vuelve el archivo <file-path> a la versión
                                                         # confirmada en el commit indicado en
                                                         # <commit-hash>
 
-## 5.7. Traer un archivo de otra rama
+## 4.7. Traer un archivo de otra rama
 
         $ git checkout <branch-name> -- <file-path>     # trae el archivo <file-path> desde la rama
                                                         # <branch-name> (sin importar si el archivo ya

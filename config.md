@@ -1,6 +1,6 @@
-# 4. Configuración de un repositorio
+# 3. Configuración de un repositorio
 
-## 4.1. Ignorar archivos
+## 3.1. Ignorar archivos
 
 Si en nuestra carpeta o directorio tenemos archivo que no queremos que Git rastree cada vez que hacemos un cambio, lo que debemos hacer es agregar un archivo llamado _.gitignore_ a la misma altura que se encuentra el archivo _.git_ y allí listar los paths de archivos que se deseen ignorar, ya sea por nombre o por extensión (ej: *.txt).
 
@@ -29,7 +29,7 @@ Esto quitará nuestro archivo del listado de seguimiento sin eliminarlo de nuest
 
 Una vez ejecutado este comando, git nos mostrará que el archivo que se ha quitado del rastreo fue eliminado, pero también nos mostrará que el mismo archivo se encuentra _unstaged_ (sin seguimiento). Esto ocurre porque el archivo aún existe en nuestro directorio de trabajo y, si bien git recibió la orden de olvidar que debía rastrearlo, todavía no se le indicó que a futuro también se lo quiere ignorar. Para ello, se debe [incluir el path del archivo en el `.gitignore`](#3.1.-Ignorar-archivos) tal como se indicó previamente.
 
-## 4.2. Definir un template para mensajes de confirmación
+## 3.2. Definir un template para mensajes de confirmación
 
 Cuando escribimos un mensaje de confirmación (`commit`), ya sea utilizando el flag `-m` o no, podemos escribir un mensaje como queramos, e incluir la información que nos parezca pertinente. Sin embargo, cuando estamos contribuyendo en un proyecto con más gente, puede que queramos tener una plantilla que le indique a cada persona la información a incluir.
 
