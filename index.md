@@ -33,4 +33,4 @@
    3. [Conflictos en una pull request](./conflicts.md/#63-conflictos-en-una-pull-request)
 <br/><br/><br/>
 
-Por [Macarena Fernandez Urquiza](https://www.linkedin.com/in/m-fernandez-urquiza/)
+Página mantenida por [Macarena Fernandez Urquiza](https://www.linkedin.com/in/m-fernandez-urquiza/)
