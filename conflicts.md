@@ -32,6 +32,7 @@ Si no tomamos la precaución de controlar previamente que no hubiese conflictos 
 
 Por ejemplo, si el archivo con conflictos es _README_ y, ante la advertencia de Git, ejecutamos el comando ```git status```, veremos:
 
+```
   $ git status
 
   On branch master
@@ -44,6 +45,7 @@ Por ejemplo, si el archivo con conflictos es _README_ y, ante la advertencia de 
       both modified:      README
 
   no changes added to commit (use "git add" and/or "git commit -a")
+```
         
 Todo aquello que sea conflictivo y no se haya podido resolver, se marca como "sin fusionar" (unmerged). Git añade a los archivos conflictivos unos marcadores especiales de resolución de conflictos que nos guiarán cuando los abramos manualmente y los editemos para corregirlos. 
 
@@ -73,15 +75,17 @@ Si no estaos usando algún editor de código, deberíamos considerar seriamente 
 
 Una vez hecho esto guardamos el archivo y agregamos el archivo al stagging (con el ya conocido comando `add`). Y si ejecutamos el comando ```git status```, veremos:
 
-        $ git status
+```
+  $ git status
 
-        On branch master
-        All conflicts fixed but you are still merging.
-          (use "git commit" to conclude merge)
+  On branch master
+  All conflicts fixed but you are still merging.
+    (use "git commit" to conclude merge)
 
-        Changes to be committed:
-
-            modified:   README
+  Changes to be committed:
+  
+      modified:   README
+```
             
 Si todo ha salido correctamente y vemos que todos los archivos conflictivos están marcados como preparados, podemos utilizar el comando ```commit``` para terminar de confirmar la fusión y luego pushear.
 
