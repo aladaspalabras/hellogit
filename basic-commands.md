@@ -32,12 +32,16 @@ TO-DO
 
 TO-DO 
 
-## 3.9. Log
+## 3.9. Stash
+
+TO-DO
+
+## 3.10. Log
 
 TO-DO 
 
-## 3.10. Diff
+## 3.11. Diff
 
 TO-DO 
 
-## 3.11. Fetch
+## 3.12. Fetch

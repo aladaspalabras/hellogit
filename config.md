@@ -23,9 +23,9 @@ El caracter `#` nos permite agregar comentarios que no serán tenidos en cuenta 
 
 Si Git ya estaba haciendo un seguimiento de un archivo y queremos dejar de seguirlo pero no queremos borrar el archivo de nuestro directorio, lo que se debe hacer es ejecutar el siguiente comando:
 
-        $ git rm --cached <path-del-archivo>
+        $ git rm --cached <file-path>
         
-Esto quitará nuestro archivo del listado de seguimiento sin eliminarlo de nuestra carpeta local. Si no se agrega el flag --cached, Git removerá el archivo de manera --force: lo quitará del listado de seguimiento y lo eliminará de nuestra computadora (similar a hacer ```rm <nombre-del-archivo>``` solo que tampoco lo encontraremos en la papelera).
+Esto quitará nuestro archivo del listado de seguimiento sin eliminarlo de nuestra carpeta local. Si no se agrega el flag --cached, Git removerá el archivo de manera --force: lo quitará del listado de seguimiento y lo eliminará de nuestra computadora (similar a hacer ```rm <file-path>``` solo que tampoco lo encontraremos en la papelera).
 
 Una vez ejecutado este comando, git nos mostrará que el archivo que se ha quitado del rastreo fue eliminado, pero también nos mostrará que el mismo archivo se encuentra _unstaged_ (sin seguimiento). Esto ocurre porque el archivo aún existe en nuestro directorio de trabajo y, si bien git recibió la orden de olvidar que debía rastrearlo, todavía no se le indicó que a futuro también se lo quiere ignorar. Para ello, se debe [incluir el path del archivo en el `.gitignore`](#3.1.-Ignorar-archivos) tal como se indicó previamente.
 

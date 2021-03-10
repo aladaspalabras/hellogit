@@ -4,7 +4,7 @@ Supongamos que estamos trabajando en el mismo repositorio con otras personas y e
 
 Supongamos, además, que la otra persona se sincronizó su rama en el mismo momento que nosotros y, por ende, tenemos las mismas versiones de los archivos.
 
-En ese contexto, ambos empezamos a trabajar y a introducir cambios en el repositorio. Sin embargo, la otra persona pushea sus modificaciones antes que nosotros y entonces, cuando nosotros queremos subir al remoto las nuestras, la consola nos dice que éste contiene cambios que no tenemos en nuestro repo local (claro, los que acaba de subir la otra persona). 
+En ese contexto, ambos empezamos a trabajar y a introducir cambios en el repositorio. Sin embargo, la otra persona pushea sus modificaciones antes que nosotros y entonces, cuando queremos subir al remoto las nuestras, la consola nos dice que éste contiene cambios que no tenemos en nuestro repo local (claro, los que acaba de subir la otra persona). 
 
 ¿Qué hacer entonces? Hacemos un `pull` y nos descargamos los nuevos cambios.
 
@@ -30,7 +30,7 @@ Si no hay cambios o si vemos que no resultan conflictivos, lo que debemos hacer 
 
 Si no tomamos la precaución de controlar previamente que no hubiese conflictos o si la tomamos pero pensamos que era una buena idea resolverlos luego, tenemos que empezar a reflexionar sobre las decisiones que tomamos. Además, no vamos a llegar muy lejos porque, si hay conflictos, cuando queramos hacer el push de nuestros cambios, Git no nos va a dejar y nos va a pedir que los resolvamos.
 
-Si en este momento ejecutamos el comando ```git status```, veremos:
+Por ejemplo, si el archivo con conflictos es _README_ y, ante la advertencia de Git, ejecutamos el comando ```git status```, veremos:
 
   $ git status
 
@@ -47,7 +47,7 @@ Si en este momento ejecutamos el comando ```git status```, veremos:
         
 Todo aquello que sea conflictivo y no se haya podido resolver, se marca como "sin fusionar" (unmerged). Git añade a los archivos conflictivos unos marcadores especiales de resolución de conflictos que nos guiarán cuando los abramos manualmente y los editemos para corregirlos. 
 
-Lo mejor para esto es usar una interfaz visual del tipo de  [Visual Studio Code](https://code.visualstudio.com/). Allí, al abrir el archivo con conflictos veremos que contiene algo como:
+Si abrimos los archivos en un editor de texto plano convencional, veremos algo como lo siguiente:
 
 ```
 <<<<<<< HEAD (Current Changes)
@@ -57,10 +57,9 @@ Mi primer repositorio en GitHub
 >>>>>>> master (Incomming Changes)
 ```
 
-Aquí se nos marca que la versión en HEAD contiene lo indicado en la parte superior del bloque  y que la versión entrante contiene el resto, lo indicado en la parte inferior del bloque. 
+Aquí se nos marca que la versión en HEAD (nuetra versión del directorio de trabajo) contiene lo indicado en la parte superior del bloque y la versión entrante contiene el resto, lo indicado en la parte inferior del bloque. 
 
-A modo de ilustración podemos ver la siguiente imagen:
-
+De todos modos, para una visualización más clara, lo mejor suele ser usar una interfaz visual del tipo de  [Visual Studio Code](https://code.visualstudio.com/), donde veremos algo como lo siguiente:
 
 ![alt text](./pictures/visualconflicts.png)
 

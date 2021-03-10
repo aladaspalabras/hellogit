@@ -1,12 +1,12 @@
 # 5. Ramas
 
-Cuando hablamos de ramificaciones, nos referimos a que podemos tomar una rama de desarrollo (supongamos, llamada master) y, a partir de ella, generar otra igual en la que seguiremos trabajando, pero cuyos cambios en principio no afectarás a la rama de origen.
+Cuando hablamos de ramificaciones, nos referimos a que podemos tomar una rama de desarrollo (supongamos, llamada master) y, a partir de ella, generar otra igual en la que seguiremos trabajando, pero cuyos cambios en principio no afectarán a la rama de origen.
 
 Esto es sumamente útil cuando estamos compartiendo nuestro repositorio con otras personas y no queremos que sus cambios interfieran en nuestro trabajo, pero es posible que luego queramos integrar todo, los archivos en nuestra rama con los de las ramas de los demás.
 
-Una rama Git es simplemente un apuntador móvil que señala cada una de las confirmaciones que vamos haciendo en nuestro repositorio, lo que significa que señala cada foto que de nuestros archivos que vamos tomando.
+Para Git, una rama es simplemente un apuntador móvil que señala cada una de las confirmaciones que vamos haciendo en nuestro repositorio, lo que significa que señala cada foto de nuestros archivos que vamos tomando.
 
-Cuando creamos un repositorio, la primera rama qe se crea por defecto suele ser `master` o `main` y esta es la que se considera la _rama base_, pero esto es configurable y se puede indicar cualquier otra rama en su lugar.
+Cuando creamos un repositorio, la primera rama que se crea por defecto suele ser `master` o `main` y esta es la que se considera la _rama base_, pero esto es configurable y se puede indicar cualquier otra rama en su lugar.
 
 Que una rama sea la _rama base_ implica, entre otras cosas, que cuando alguien clone el repo, la rama en la que se encontrará ni bien se genera la copia local será esta rama.
 
@@ -14,26 +14,24 @@ Con cada confirmación que realicemos, y mientras no nos cambiemos de rama, el a
 
 ![alt text](./pictures/master.png)
 
-![alt text](./pictures/advance-testing2.png)
-
 ## 5.1. Creación de ramas
         
         $ git checkout -b <new-branch>          # crea una nueva rama idéntica a la rama en la que nos
                                                 # encontramos y nos mueve hacia ella
     
-Esto creará un nuevo apuntador llamado \<new-branch> que estará basado en la rama desde la cual fue creado. Esto significa que, hasta que hagamos alguna modificación en esta nueva rama o en aquella desde la que partimos, ambas serán iguales. 
+El comando anterior creará un nuevo apuntador llamado \<new-branch> que estará basado en la rama desde la cual fue creado. Esto significa que, hasta que hagamos alguna modificación en esta nueva rama o en aquella desde la que partimos, ambas serán iguales. 
 Además, al mismo tiempo que crea la rama, el comando nos moverá a ese apuntador. Cualquier cambio que hagamos será seguido por ese apuntador y no por aquel donde nos encontrábamos previamente.
-
-![alt text](./pictures/two-branches.png)
 
 Si, en cambio, solo queremos crear una nueva rama pero no movernos hacia ella, debemos ejecutar el siguiente comando:
 
         $ git branch <new-branch>               # crea una nueva rama idéntica a la rama en la que nos
                                                 # encontramos
 
+![alt text](./pictures/two-branches.png)
+
 ## 5.2. Cambio entre ramas
 
-        $ git checkout <branch-name>      # mueve mi apuntador a la rama indicada
+        $ git checkout <branch-name>            # mueve mi apuntador a la rama indicada
         
 Para poder ejecutar este comando es necesario tener el árbol de trabajo o working directory de la rama en la que me encuentro limpio. De lo contrario, Git nos pedirá que subamos nuestros cambios al remoto o los descartemos. 
 
@@ -51,7 +49,7 @@ Si deseamos fusionar los cambios de una rama en otra, debemos movernos a aquella
         $ git fetch <remote> <other-branch>:<other-branch>      # se asegura de que la rama cuyos
                                                                 # cambios queremos introducir se 
                                                                 # encuentre sincronizada con el
-                                                                # remoto (origin)
+                                                                # remoto <remote>
         
         $ git merge <other-branch>                              # importa los cambios de la rama 
                                                                 # <other-branch> en aquella en la que

@@ -10,15 +10,15 @@ Para descargarnos o, más propiamente dicho, *clonarnos* un repositorio que ya e
 
 Luego, abrimos desde terminal la carpeta donde deseamos descargar el repositorio y escribimos:
 
-        $ git clone <url-copiada*>
+        $ git clone <url>
 
 Esto crea un directorio dentro de la carpeta con el mismo nombre que el repositorio clonado y con todos los subdirectorios necesarios para poder realizar el control de versiones de los archivos.
 
 En caso de querer clonar un repositorio indicando un nombre distinto para el directorio a crear, se debe especificar dicho nombre de la siguiente manera:
 
-       $ git clone <url-copiada> <nombre-del-directorio>
+       $ git clone <url> <folder-name>
         
-Ese comando hace lo mismo que el anterior, pero llama al directorio de destino bajo el nombre indicado en _<nombre-del-directorio\>_
+Ese comando hace lo mismo que el anterior, pero llama al directorio de destino bajo el nombre indicado en _<folder-name>_
 
 ## 2.2. Crear un repositorio nuevo
 
@@ -30,7 +30,7 @@ Este comando lo que hará es crear un subdirectoio .git, dentro de nuestra carpe
 
 Empezaremos indicando cuál será nuestro almacenamiento remoto. Para esto, iremos a nuestro repositorio en la nube y copiaremos su url desde el botón _Clone_ del mismo modo que se indica en el apartado [2.1.](#2.1.-Descargar-un-repositorio-existente)
 
-        $ git remote add origin <url-copiada>
+        $ git remote add origin <url>
 
 Si mientras hacemos esto vamos mirando el archivo _config_, podremos ver cómo se va agregando la información.
 
@@ -64,7 +64,7 @@ Ahora, debemos agregar nuestro archivos contenidos en la carpeta al área de pre
          
          $ git add -A
          
-Tanto el punto como el -A indican que todos los archivos deben agregarse al staging. Si en cambio se desea agregar solo algunos archivos, se puede cambiar el punto por el path específico del archvio (ej: git add <path-del-archivo\>).
+Tanto el punto como el -A indican que todos los archivos deben agregarse al staging. Si en cambio se desea agregar solo algunos archivos, se puede cambiar el punto por el path específico del archvio (ej: git add <file-path\>).
     
 Una vez preparados los arhcivos, es necesario confirmarlos. Esto se hace mediante el siguiente comando:
  
