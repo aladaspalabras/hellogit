@@ -98,4 +98,4 @@ Para forkear un repositorio simplemente debemos clickear en el botón `fork` (us
 
 ![alt text](./pictures/fork.png)
 
-Esto hará que se genere una copia idéndica al proyecto forkeado en nuestro repo y, a partir de allí, podemos clonarlo en nuestra computadora como se detalló en [la sección 2.1](#2.1.-Descargar-un-repositorio-existente).
+Esto hará que se genere una copia idéndica al proyecto forkeado en nuestro repo y, a partir de allí, podemos clonarlo en nuestra computadora como se detalló en la sección [2.1](#21-descargar-un-repositorio-existente).
