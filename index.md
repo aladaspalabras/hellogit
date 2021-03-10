@@ -28,7 +28,7 @@
 
 6. [Resolución de conflictos](./conflicts.md)
    1. ¿Cómo saber si alguien más hizo cambios?
-   2. Conflictos en un merge(./conflicts.md/#62-conflictos-en-un-merge)
+   2. [Conflictos en un merge](./conflicts.md/#62-conflictos-en-un-merge)
    3. Conflictos en una pull (request)
 <br/><br/><br/>
 
