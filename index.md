@@ -10,8 +10,8 @@
    3. [Forkear un repositorio](./first-steps.md/#23-forkear-un-repositorio)
 
 3. [Configuración de un repositorio](./config.md)
-   1. [Ignorar archivos](./config.md/)
-   2. [Definir un template para mensajes de confirmación](./config.md/)
+   1. [Ignorar archivos](./config.md/#31-ignorar-archivos)
+   2. [Definir un template para mensajes de confirmación](./config.md/#32-definir-un-template-para-mensajes-de-confirmación)
 
 4. [Gestión de cambios](./changes.md)
    1. [Ver cambios realizados respecto del remoto](./changes.md/)
