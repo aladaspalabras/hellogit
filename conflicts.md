@@ -91,6 +91,34 @@ Si todo ha salido correctamente y vemos que todos los archivos conflictivos est�
 
 ## 6.3. Conflictos en una pull request
 
-Puede suceder, cuando realizamos una PR, que nos surjan conflictos. En el caso de que los mismos se deban a que estamos compartiendo la rama desde la que hacemos la PR con otra persona, la resolución se debe realizar del mismo modo que se indicó en el apartado [6.2](#62-conflictos-en-un-merge)
+Cuando realizamos una PR, puede suceder que nos surjan conflictos. En el caso de que los mismos se deban a que estamos compartiendo la rama desde la que hacemos la PR con otra persona, la resolución se debe realizar del mismo modo que se indicó en el apartado [6.2](#62-conflictos-en-un-merge).
 
-[ba](#63-conflictos-en-una-pull-request)
+Sin embargo, también puede ocurrir que la interfaz de nuestro remoto nos indique que el conflicto se da con la rama en la que queremos introducir nuestros cambios (recordemos que una pull request es una solicitud a una rama para que incorpore los cambios de nuestra rama). En este caso, lo que sucede es que la rama que desea introducir cambios y aquella en la cual se los introduce divergen en algún punto de su historia. ¿Qué significa esto? Que la rama que recibirá los cambios tiene algún archivo con modificaciones que la rama que desea introducir cambios no tiene. 
+
+Para evitar esto, lo mejor es siempre armar nuestra rama de trabajo partiendo de aquella en la que luego querremos introducir nuestros arreglos o mejoras. Por ejemplo, si la rama base de nuestro repo es _master_ y sabemos que nuestros cambios deben fusionarse con ella, partimos de ahí para generar nuestra rama de trabajo. Pongámosle a esta, por nombre, _fix/bug123_. 
+
+Ahora bien, una vez que tenemos nuestro trabajo listo, hacemos la PR a master. Si master no tuvo cambios en medio de que armamos nuestra rama, trabajamos e hicimos la PR, probablemente no tengamos mayores iconvenientes. Pero si, en cambio, alguien más hizo una PR a master y esa PR se mergeó, nuestra rama estará intentando meterse en master sin tener la misma historia, puesto que no tendremos los últimos cambios incorporados. Para solucionar esto, debemos traer los cambios de master a nuestra rama y así alinear las historias.
+
+En este caso, lo que debemos hacer es lo siguiente. En nuestra copia local ejecutamos:
+
+    $ git checkout <fix-branch>                           # nos posicionamos en la rama que tiene
+                                                          # nuestro trabajo
+    
+    $ git fetch <remote> <target-branch>:<target-branch>  # nos aseguramos de que la rama a la que
+                                                          # hacemos la PR está sincronizada
+
+    $ git merge <target-branch>                           # fusionamos los cambios de nuestra rama
+                                                          # target (a la que le hacemos la PR) en
+                                                          # nuestra rama de trabajo
+
+Siguiendo nuestro ejemplo anterior:
+
+    $ git checkout fix/bug123
+    
+    $ git fetch origin master:master
+
+    $ git merge master
+
+Una vez hecho esto, pueden suceder dos cosas:
+- En el mundo más feliz, el merge con la rama target se hace sin conflictos y solo nos restará hacer un `push` a nuestra rama de trabajo. Luego de hacerlo, veremos que la PR realizada se actualiza y las advertencias de conflictos en el remoto deberían desaparecer.
+- En un mundo menos feliz, Git podría indicarnos que hay conflictos porque en la rama target había modificaciones que alteraban los mismos archivos que nosotros cambiamos. En este caso, debemos resolverlos del mismo modo que se indicó en la sección [6.2](#62-conflictos-en-un-merge). Una vez resuletos, realizar los ya clásicos `add`, `commit` y `push`. Igual que en el mundo feliz, la PR se actualizará (debido a que la rama se actualizó) y deberíamos dejar de ver las advertencias de conflictos.
