@@ -34,7 +34,7 @@
                                                 # archivos que se encuentren donde se está posicionado
                                                 # y debajo de ella
 
-## 4.3. Quitar cambios del área de staging
+## 4.3. Quitar cambios del área de preparación
 
         $ git reset HEAD <file-path>    # quita los cambios en el área de preparación del archivo
                                         # <file-path> pero lo deja modificado en el directorio de

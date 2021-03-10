@@ -83,7 +83,7 @@ Una vez hecho esto guardamos el archivo y agregamos el archivo al stagging (con 
     (use "git commit" to conclude merge)
 
   Changes to be committed:
-  
+
       modified:   README
 ```
             
@@ -92,3 +92,5 @@ Si todo ha salido correctamente y vemos que todos los archivos conflictivos est�
 ## 6.3. Conflictos en una pull request
 
 Puede suceder, cuando realizamos una PR, que nos surjan conflictos. En el caso de que los mismos se deban a que estamos compartiendo la rama desde la que hacemos la PR con otra persona, la resolución se debe realizar del mismo modo que se indicó en el apartado [6.2](#62-conflictos-en-un-merge)
+
+[ba](#63-conflictos-en-una-pull-request)

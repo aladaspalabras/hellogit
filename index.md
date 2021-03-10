@@ -14,12 +14,12 @@
    2. [Definir un template para mensajes de confirmación](./config.md/#32-definir-un-template-para-mensajes-de-confirmación)
 
 4. [Gestión de cambios](./changes.md)
-   1. [Ver cambios realizados respecto del remoto](./changes.md/)
-   2. [Deshacer cambios en el árbol de trabajo](./changes.md/)
-   3. [Quitar cambios del área de staging](./changes.md/)
-   4. [Quitar cambios del área de confirmación](./changes.md/)
-   5. [Visualizar qué commits modificaron un archivo](./changes.md/)
-   6. [Volver un archivo a la versión de algún commit anterior](./changes.md/)
+   1. [Ver cambios realizados respecto del remoto](./changes.md/#41-ver-cambios-realizados-respecto-del-remoto)
+   2. [Deshacer cambios en el árbol de trabajo](./changes.md/#42-deshacer-cambios-en-el-árbol-de-trabajo)
+   3. [Quitar cambios del área de staging](./changes.md/#43-quitar-cambios-del-área-de-preparación)
+   4. [Quitar cambios del área de confirmación](./changes.md/#44-quitar-cambios-del-área-de-confirmación)
+   5. [Visualizar qué commits modificaron un archivo](./changes.md/#45-visualizar-qué-commits-modificaron-un-archivo)
+   6. [Volver un archivo a la versión de algún commit anterior](./changes.md/#46-volver-un-archivo-a-la-versión-de-algún-commit-anterior)
 
 5. [Ramas](./branches.md)
    1. [Creación de ramas](./branches.md/#51-creación-de-ramas)
