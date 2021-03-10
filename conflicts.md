@@ -26,7 +26,7 @@ Los siguientes comandos nos dirán si hubo cambios en el remoto que no tenemos e
 Esto nos permite ver si hay cambios que puedan generar conflictos con los nuestros (porque modifican el mismo archivo, por ejemplo).
 Si no hay cambios o si vemos que no resultan conflictivos, lo que debemos hacer es ejecutar los comandos `add` y `commit` de modo que nuestros cambios se guarden en el área de preparación. Una vez hecho esto, nos descargamos los cambios del remoto utilizando el comando `pull` y, finalmente, pusheamos nuestros cambios (solo pullear si hay cambios, si no los hay, luego de commitear, pushear directamente).
 
-## 6.2. Conflictos en un merge (WiP)
+## 6.2. Conflictos en un merge
 
 Si no tomamos la precaución de controlar previamente que no hubiese conflictos o si la tomamos pero pensamos que era una buena idea resolverlos luego, tenemos que empezar a reflexionar sobre las decisiones que tomamos. Además, no vamos a llegar muy lejos porque, si hay conflictos, cuando queramos hacer el push de nuestros cambios, Git no nos va a dejar y nos va a pedir que los resolvamos.
 
@@ -59,14 +59,19 @@ Mi primer repositorio en GitHub
 
 Aquí se nos marca que la versión en HEAD (nuetra versión del directorio de trabajo) contiene lo indicado en la parte superior del bloque y la versión entrante contiene el resto, lo indicado en la parte inferior del bloque. 
 
-De todos modos, para una visualización más clara, lo mejor suele ser usar una interfaz visual del tipo de  [Visual Studio Code](https://code.visualstudio.com/), donde veremos algo como lo siguiente:
+De todos modos, para una visualización más clara, lo mejor suele ser usar un editor de código del tipo de  [Visual Studio Code](https://code.visualstudio.com/)(VSC), donde veremos algo como lo siguiente:
 
 ![alt text](./pictures/visualconflicts.png)
 
-Si queremos aceptar los cambios entrantes, simplemente debemos hacer click en el **+** en la esquina superior izquierda.
-Si, en cambio, queremos dejar nuestros cambios, debemos ir a la opción **View>Command Palette** (también en Visual Studio Code) y, una vez allí, elegir la opción _Accept Current Change_. 
+Si queremos aceptar los cambios entrantes, simplemente debemos hacer click en el **Accept Incoming Change**.
+Si, en cambio, queremos dejar nuestros cambios, debemos elegir **Accept Current Change**.
+O podemos aceptar ambo, para ello usamos **Accept Both Changes**.
 
-Una vez hecho esto, si ejecutamos el comando ```git status```, veremos:
+Esto debemos hacerlo para cada cambio. Pero, si ya sabemos que queremos aceptar todos los cambios entrantes o todos los cambios actuales (los que están en nuestro directorio de trabajo) y estamos usando VSC, podemos utilizar la paleta de comandos. Para ello, apretamos `Ctrl+Shift+P` y escribimos _Accept All_. Esto hará que se nos muestren las opciones para resolver todos los conflictos de fusión de la misma forma (aceptando todos los cambios entrantes, todos los actuales o ambos cambios).
+
+Si no estaos usando algún editor de código, deberíamos considerar seriamente hacerlo. Mientras tanto, para resolver nuestros conflictos, deberemos abrir un editor de texto plano (Text Editor, Notepad o el que sea de nuestra preferencia), arremangarnos y buscar cada ocurrencia de conflicto (podemos buscar _HEAD_). Cada vez que encontremos una, tenemos que borrar las líneas que indican _<<<<<<< HEAD (Current Changes)_, _>>>>>>> \<branch> (Incomming Changes)_, _=======_ y las de la porción de código que queremos desestimar. Solo debe quedar el cambio que queremos (el current o el incomming). En el ejemplo anterior, deberíamos dejar o bien _Mi repositorio en GitHub_, o bien _Mi primer repositorio en GitHub_
+
+Una vez hecho esto guardamos el archivo y agregamos el archivo al stagging (con el ya conocido comando `add`). Y si ejecutamos el comando ```git status```, veremos:
 
         $ git status
 
@@ -78,8 +83,8 @@ Una vez hecho esto, si ejecutamos el comando ```git status```, veremos:
 
             modified:   README
             
-Si todo ha salido correctamente, y vemos que todos los archivos conflictivos están marcados como preparados, podemos utilizar el comando ```commit``` para terminar de confirmar la fusión y luego pushear.
+Si todo ha salido correctamente y vemos que todos los archivos conflictivos están marcados como preparados, podemos utilizar el comando ```commit``` para terminar de confirmar la fusión y luego pushear.
 
 ## 6.3. Conflictos en una pull request
 
-TODO
+Puede suceder, cuando realizamos una PR, que nos surjan conflictos. En el caso de que los mismos se deban a que estamos compartiendo la rama desde la que hacemos la PR con otra persona, la resolución se debe realizar del mismo modo que se indicó en el apartado [6.2](#62-conflictos-en-un-merge)
