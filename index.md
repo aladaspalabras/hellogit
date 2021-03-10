@@ -1,25 +1,25 @@
 1. [Conceptos básicos de Git](./basic-concepts.md)
-   1. ¿Qué es Git?
-   2. ¿Qué es un control de versiones?
-   3. ¿Git y GitHub son lo mismo?
-   4. ¿Cómo funciona Git?
+   1. [¿Qué es Git?](./basic-concepts.md/#11-qué-es-git)
+   2. [¿Qué es un control de versiones?](./basic-concepts.md/#12-qué-es-un-control-de-versiones)
+   3. [¿Git y GitHub son lo mismo?](./basic-concepts.md/#13-git-y-github-son-lo-mismo)
+   4. [¿Cómo funciona Git?](./basic-concepts.md/#14-cómo-funciona-git)
   
 2. [Primeros pasos: obtener un repositorio](./first-steps.md)
-   1. Descargar un repositorio existente
-   2. Crear un repositorio nuevo
-   3. Forkear un repositorio
+   1. [Descargar un repositorio existente](./first-steps.md/)
+   2. [Crear un repositorio nuevo](./first-steps.md/)
+   3. [Forkear un repositorio](./first-steps.md/)
 
 3. [Configuración de un repositorio](./config.md)
-   1. Ignorar archivos
-   2. Definir un template para mensajes de confirmación
+   1. [Ignorar archivos](./config.md/)
+   2. [Definir un template para mensajes de confirmación](./config.md/)
 
 4. [Gestión de cambios](./changes.md)
-   1. Ver cambios realizados respecto del remoto
-   2. Deshacer cambios en el árbol de trabajo
-   3. Quitar cambios del área de staging
-   4. Quitar cambios del área de confirmación
-   5. Visualizar qué commits modificaron un archivo
-   6. Volver un archivo a la versión de algún commit anterior
+   1. [Ver cambios realizados respecto del remoto](./changes.md/)
+   2. [Deshacer cambios en el árbol de trabajo](./changes.md/)
+   3. [Quitar cambios del área de staging](./changes.md/)
+   4. [Quitar cambios del área de confirmación](./changes.md/)
+   5. [Visualizar qué commits modificaron un archivo](./changes.md/)
+   6. [Volver un archivo a la versión de algún commit anterior](./changes.md/)
 
 5. [Ramas](./branches.md)
    1. [Creación de ramas](./branches.md/#51-creación-de-ramas)
