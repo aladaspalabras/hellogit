@@ -5,9 +5,9 @@
    4. [¿Cómo funciona Git?](./basic-concepts.md/#14-cómo-funciona-git)
   
 2. [Primeros pasos: obtener un repositorio](./first-steps.md)
-   1. [Descargar un repositorio existente](./first-steps.md/)
-   2. [Crear un repositorio nuevo](./first-steps.md/)
-   3. [Forkear un repositorio](./first-steps.md/)
+   1. [Descargar un repositorio existente](./first-steps.md/#21-descargar-un-repositorio-existente)
+   2. [Crear un repositorio nuevo](./first-steps.md/#22-crear-un-repositorio-nuevo)
+   3. [Forkear un repositorio](./first-steps.md/#23-forkear-un-repositorio)
 
 3. [Configuración de un repositorio](./config.md)
    1. [Ignorar archivos](./config.md/)
